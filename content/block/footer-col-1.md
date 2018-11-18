@@ -1,3 +1,4 @@
-#### Footer col 1
+#### Blekinge Tekniska Högskola
 
-Med brödtext i ett stycke som säger något trevligt om just detta block, eller kanske en lista av länkar.
+BTH är en av Sveriges tydligast profilerade högskolor,
+där IT och innovation för hållbar tillväxt står i fokus.

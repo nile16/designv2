@@ -1,3 +1,5 @@
-#### Footer col 2
+#### Webbprogrammering 120 hp
 
-Med brödtext i ett stycke som säger något trevligt om just detta block, eller kanske en lista av länkar.
+Vill du jobba med de senaste teknikerna inom webbutveckling, webbprogrammering
+och programmering? På BTH skaffar du dig kunskaperna som allt fler företag
+efterfrågar, både i Sverige och internationellt.
