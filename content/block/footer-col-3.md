@@ -1,4 +1,9 @@
-Du får en gedigen grund i traditionell programvaruutveckling och din specialitet
-blir programmering i webbmiljö.
-Efter utbildningen kan du exempelvis arbeta som konsult, programmerare, testare,
-projekt-/teamledare eller chef inom webb- och programutvecklingsbranschen. 
+####Kontakt
+
+*Adress:*  
+Blekinge Tekniska Högskola  
+371 79 Karlskrona  
+*Telefon:*  
+0455 - 38 50 00  
+*E-post:*  
+info@bth.se
