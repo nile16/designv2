@@ -15,10 +15,12 @@ views:
 Min me-sida i kursen design
 =========================
 
-[FIGURE src="image/me.jpg" class="left" caption="Jag på motorcykeltur i Kambodja"]
+[FIGURE src="image/me.jpg" class="left w40" alt="Motorcykel i Kambodja" caption="Jag på motorcykeltur i Kambodja"]
 
-Jag går på Webbprogrammering för jag tycker det är trivsamt att skriva program, lite som terapiarbete ibland om det inte krånglar för mycket :-)
-Det skulle också vara kul att ha ett jobb där jag kunde jobba hemmifrån, bo var jag vill och slippa pendla.
+Jag går på Webbprogrammering för jag tycker det är trivsamt att skriva program,
+lite som terapiarbete, om det inte krånglar för mycket :-)
+Det skulle också vara kul att ha ett jobb där jag kunde jobba hemmifrån,
+bo var jag vill och slippa pendla.
 
 Jag gick ett och ett halvt år på programmet Interaktion med Webbteknologier i
 Karlshamn men bytte till Webbprogrammering för jag eftersökte mer fokus på programmering.

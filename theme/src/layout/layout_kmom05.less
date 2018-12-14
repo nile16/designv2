@@ -1,0 +1,361 @@
+/**
+ * Layout style for general structure of header, navbar, main, footer
+ * and other regions of the page including route specific styles.
+ */
+
+/**
+ * Variables
+ */
+
+
+/**
+ * General layout
+ */
+
+ // Default grid, change to fit your requirements.
+ //@columnWidth:   30;
+ //@gutterWidth:   10;
+ //@columns:       24;
+ //@gridType:      "float"; // "flex"
+
+.row {
+    #desinax-vgrid.row();
+}
+
+
+.inner-wrap {
+    #desinax-vgrid.grid(1100px);
+}
+
+// Horizontal scrollbar removal fix
+.region-header,
+.region-flash,
+.inner-wrap-header .row,
+.inner-wrap-flash .row {
+    margin: 0;
+    width: 100%;
+}
+
+.vgrid .inner-wrap {
+    @gridImage: "../img/grid_24x30x10-nomargin.png";
+    #desinax-vgrid.showGrid(@gridImage, 1100px);
+
+    &.inner-wrap-header,
+    &.inner-wrap-footer {
+        #desinax-vgrid.showGrid(@gridImage);
+    }
+}
+
+
+// Show the grid
+.hgrid .inner-wrap {
+    @gridImage: "../img/magic-number-@{magicNumber}.png";
+    #desinax-hgrid.showGrid(@gridImage);
+}
+
+
+// Header
+
+.inner-wrap-header {
+    #desinax-vgrid.grid(100%);
+    background-color: @headerBGColor;
+}
+
+.region-header {
+    #desinax-vgrid.column(@columns);
+}
+
+.region-header-col-1 {
+    #desinax-vgrid.column(4);
+}
+
+.region-header-col-2 {
+    #desinax-vgrid.column(16);
+    text-align: center;
+}
+
+.region-header-col-3 {
+    #desinax-vgrid.column(4);
+    display: none;
+}
+
+@media (max-width: 1300px) {
+    .region-header-col-1 {
+        display: none;
+    }
+    .region-header-col-2 {
+        #desinax-vgrid.column(@columns);
+    }
+}
+
+@media (max-width: 760px) {
+    .region-header-col-2 {
+        display: none;
+    }
+    .region-header-col-3 {
+        display: block;
+    }
+}
+
+// Navbar
+
+.my-navbar li a {
+    background-color: @navBarLinkBGColor;
+    font-weight: bolder;
+    color: @navBarTextColor;
+}
+
+.my-navbar li a:hover {
+    text-decoration: none;
+    background-color: @navBarLinkBGColorHover;
+    color: @navBarTextColorHover;
+}
+
+.my-navbar ul a {
+    background-color: @navBarLinkBGColor;
+    font-weight: bolder;
+    color: @navBarTextColor;
+}
+
+.my-navbar ul a:hover {
+    text-decoration: none;
+    background-color: @navBarLinkBGColorHover;
+    color: @navBarTextColorHover;
+}
+
+// Flash
+
+.region-flash {
+    #desinax-vgrid.column(@columns);
+}
+
+.region-flash img {
+    #desinax-vgrid.column(@columns);
+}
+
+// Flash message
+
+.region-flash-message {
+    #desinax-vgrid.column(@columns);
+    text-align: center;
+    font-weight: bolder;
+    color: @flashMessageTextColor;
+    background-color: @flashMessageBGColor;
+}
+
+.region-flash-message .flashmessage-icon,
+.region-flash-message p {
+    display: inline;
+}
+
+// Breadcrumb
+
+.inner-wrap-breadcrumb {
+    background-color: @mainBGColor;
+    color: @mainTextColor;
+}
+
+.region-breadcrumb {
+    #desinax-vgrid.column(24);
+    #desinax-vgrid.push(1);
+    margin-bottom: @magicNumber;
+}
+
+.region-breadcrumb ul {
+    list-style: none;
+    padding: 0;
+}
+
+.region-breadcrumb ul li {
+    float: left;
+    margin-right: 5px;
+}
+
+.region-breadcrumb li:not(:first-child):before {
+    content: ">>> ";
+}
+
+@media (max-width: 800px) {
+    .region-breadcrumb {
+        display: none;
+    }
+}
+
+// Main and sidebars
+
+.inner-wrap-main {
+    background-color: @mainBGColor;
+    color: @mainTextColor;
+}
+
+.inner-wrap-main a {
+    color: @mainLinkColor;
+    text-decoration: none;
+}
+
+
+.inner-wrap-main select {
+    color: @mainTextColor;
+}
+
+.region-sidebar-left,
+.region-sidebar-right {
+    #desinax-vgrid.column(6);
+    #desinax-vgrid.push(1);
+    margin-bottom: @magicNumber;
+}
+
+.region-sidebar-left ul {
+    list-style: none;
+    padding: 0;
+}
+
+.region-main {
+    #desinax-vgrid.column(@columns - 2);
+    #desinax-vgrid.push(1);
+    &.has-sidebar {
+        #desinax-vgrid.column(15);
+        #desinax-vgrid.push(1);
+    }
+    margin-bottom: @magicNumber;
+}
+
+@media (max-width: 800px) {
+    .region-sidebar-left,
+    .region-sidebar-right {
+        #desinax-vgrid.column(22);
+        #desinax-vgrid.push(1);
+    }
+
+    .region-main {
+        #desinax-vgrid.column(22);
+        #desinax-vgrid.push(1);
+        &.has-sidebar {
+            #desinax-vgrid.column(22);
+            #desinax-vgrid.push(1);
+        }
+    }
+}
+
+// Misc
+
+h1, h2, h3, h4, h5, h6 {
+    border-color: @mainTextColor;
+}
+
+fieldset {
+    border-top-color: @mainTextColor;
+    border-right-color: @mainTextColor;
+    border-bottom-color: @mainTextColor;
+    border-left-color: @mainTextColor;
+    border-style: solid;
+}
+
+.article {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+code {
+    background-color: @codeBGColor;
+    color: @codeTextColor;
+    border: 1px solid @mainTextColor;
+}
+
+hr {
+    color: @mainTextColor;
+    border-color: @mainTextColor;
+    background-color: @mainTextColor;
+}
+
+hr:after {
+    color: @mainTextColor;
+    background-color: @mainBGColor;
+}
+
+
+// next-previous
+
+.next-previous {
+    margin-top: @magicNumber;
+    color: @mainLinkColor;
+}
+
+.left,
+.previous {
+    float: left;
+}
+
+.right,
+.next {
+    float: right;
+}
+
+// Footer
+
+.region-footer h1,
+.region-footer h2,
+.region-footer h3,
+.region-footer h4,
+.region-footer h5,
+.region-footer h6 {
+    border-color: @footerTextColor;
+}
+
+.outer-wrap-footer,
+.inner-wrap-footer {
+    color: @footerTextColor;
+    background-color: @footerBGColor;
+}
+
+.inner-wrap-footer {
+}
+
+.site-footer {
+    #desinax-vgrid.column(22);
+    #desinax-vgrid.push(1);
+}
+
+.site-logo {
+    display: none;
+}
+
+.footer-column-1 {
+    #desinax-vgrid.column(5);
+    #desinax-vgrid.push(1);
+}
+
+.footer-column-2 {
+    #desinax-vgrid.column(10);
+    #desinax-vgrid.push(1);
+}
+
+.footer-column-3 {
+    #desinax-vgrid.column(5);
+    #desinax-vgrid.push(1);
+}
+
+@media (max-width: 1100px) {
+    .footer-column-1 {
+        #desinax-vgrid.column(7);
+        #desinax-vgrid.push(1);
+    }
+    .footer-column-2 {
+        #desinax-vgrid.column(14);
+        #desinax-vgrid.push(1);
+    }
+    .footer-column-3 {
+        #desinax-vgrid.column(8);
+        #desinax-vgrid.push(9);
+    }
+}
+
+@media (max-width: 800px) {
+    .footer-column-1,
+    .footer-column-2,
+    .footer-column-3 {
+        #desinax-vgrid.column(22);
+        #desinax-vgrid.push(1);
+    }
+}
